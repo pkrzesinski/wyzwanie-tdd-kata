@@ -6,7 +6,7 @@ public class Calculator {
 
     public Integer add(String input) {
 
-        if (input.length() == 0) {
+        if (input == null || input.length() == 0) {
             return 0;
         } else {
             String[] values = input.replaceAll("\\s", "").split(",");

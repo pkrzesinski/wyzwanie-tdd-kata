@@ -85,4 +85,17 @@ public class CalculatorTest {
         assertThat(result, equalTo(-1));
     }
 
+    @Test
+    public void should_return_0_when_string_null() {
+        //given
+        Calculator calculatorUndetTest = new Calculator();
+        String input = null;
+
+        //when
+        Integer result = calculatorUndetTest.add(null);
+
+        //then
+        assertThat(result, equalTo(0));
+    }
+
 }
