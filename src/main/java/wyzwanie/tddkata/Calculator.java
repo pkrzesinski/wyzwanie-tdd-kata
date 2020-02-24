@@ -5,9 +5,23 @@ import java.util.Scanner;
 public class Calculator {
 
     public Integer add(String input) {
-        return 0;
-    }
 
+        if (input.length() == 0) {
+            return 0;
+        } else {
+            String[] values = input.replaceAll("\\s", "").split(",");
+
+            Integer sum = 0;
+            for (String s : values) {
+                try {
+                    sum += Integer.parseInt(s);
+                } catch (NumberFormatException e) {
+                    return -1;
+                }
+            }
+            return sum;
+        }
+    }
 
     //Do not modify code below this line. This is just a runner
 
